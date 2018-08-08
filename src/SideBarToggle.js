@@ -4,7 +4,7 @@ class SideBarToggle extends Component {
 
   render() {
     return(
-      <button className="toggle-SideBar">
+      <button className="toggle-SideBar" onClick={this.props.handleTogglesideBar}>
         <div className="toggle-line"/>
         <div className="toggle-line"/>
         <div className="toggle-line"/>
