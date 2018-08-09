@@ -7,10 +7,10 @@ import MapContainer from './MapContainer.js'
 class App extends Component {
 
   state={
-    locationsAll:[{a:'hello mymmmmmmmmmmmmmm mmmmmmmmm'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
-    locationsCurrent:[{a:'hello mymmmmmmmmmmm mmmmmmmmmmmm'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
+    locationsAll:[{a:'hello my'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
+    locationsCurrent:[{a:'hello my'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
     sideBarOpen: false,
-    chosenMarkerOrDiv:[] //rename later
+    chosenLocation:null // note to self, chosen location would be an object.
     // previousSideBarState:true
 
   }
@@ -35,6 +35,20 @@ class App extends Component {
       locationsCurrent
     })
   }
+  chooseLocation = (location) => {
+    if (location !== this.state.chosenLocation) {
+      this.setState({
+        chosenLocation:location
+      })
+    }else {
+      this.setState({
+        chosenLocation:null
+      })
+
+      }
+    }
+
+
 
   render() {
 
@@ -54,7 +68,12 @@ class App extends Component {
 
 
           </header>
-          <SideBar toggle={navClasses} locationsList={this.state.locationsCurrent} locationsAll= {this.state.locationsAll} updateCurrentLocations = {this.updateCurrentLocations}/>
+          <SideBar toggle={navClasses}
+          locationsList={this.state.locationsCurrent}
+          locationsAll= {this.state.locationsAll}
+          updateCurrentLocations = {this.updateCurrentLocations}
+          chooseLocation = {this.state.chooseLocation}
+          />
 {/**/}
 
            <MapContainer google={this.props.google}/>

@@ -58,7 +58,7 @@ class SideBar extends Component {
       {
             (this.props.locationsList.constructor === Array) ?
                 this.props.locationsList.map(location =>
-            <li className="location-sideBar" key={location.a}> {location.a} </li>
+            <li className="location-sideBar" key={location.a} > {location.a} </li>
             ):null
           }
           </ul>

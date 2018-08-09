@@ -88,6 +88,7 @@ nav{
 .close{
   transform: translate(-300px,0);
   transition: transform 0.3s ease;
+  
 }
 .location-sideBar {
   display: flex;
