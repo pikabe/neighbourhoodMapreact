@@ -25,7 +25,7 @@ html, body{
 .App-header {
   /* background-color: #222; */
   background-color: #483D8B;
-  height: 20%;
+  height: 15%;
   width: 100%;
   /* padding: 20px; */
   padding: 0px;
@@ -59,6 +59,9 @@ nav{
 .toggle-SideBar{
   /* background-color: black; */
   background-color: #8A2BE2;
+  position: absolute;
+  bottom: 7px;
+  left: 7px;
 }
 
 .toggle-line{
@@ -68,7 +71,7 @@ nav{
   background-color: white;
 }
 .sideBar {
-  height:80vh;
+  height:85vh;
   /* width:30vw; */
   /* max-width: 300px; */
   width:300px;
@@ -78,7 +81,7 @@ nav{
   box-shadow: 6px 10px 18px #2F4F4F;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 20vh;
+  padding-top: 15vh;
   position: absolute;
   z-index: 998;
 }
@@ -101,10 +104,17 @@ nav{
   height: 50px;
   border-color: #	191970;
 }
-Map {
-  position:relative;
+@media screen and (min-width:574px) {
+  .toggle-SideBar{
+
+    /* display: none; */
+  }
 
 }
+/* Map {
+  position:relative;
+
+} */
 
 /* .map{
   width: 80%;
