@@ -79,8 +79,8 @@ nav{
   /* position: absolute; */
   background:#B0C4DE;
   box-shadow: 6px 10px 18px #2F4F4F;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   padding-top: 15vh;
   position: absolute;
   z-index: 998;
@@ -90,6 +90,11 @@ nav{
   transition: transform 0.3s ease;
 }
 .location-sideBar {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  padding: 5px;
+
   width: 100%;
 }
 .map-container{

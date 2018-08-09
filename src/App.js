@@ -7,8 +7,8 @@ import MapContainer from './MapContainer.js'
 class App extends Component {
 
   state={
-    locationsAll:[{a:'hello my'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
-    locationsCurrent:[{a:'hello my'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
+    locationsAll:[{a:'hello mymmmmmmmmmmmmmm mmmmmmmmm'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
+    locationsCurrent:[{a:'hello mymmmmmmmmmmm mmmmmmmmmmmm'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
     sideBarOpen: false,
     chosenMarkerOrDiv:[] //rename later
     // previousSideBarState:true

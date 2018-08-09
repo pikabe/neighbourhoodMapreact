@@ -54,12 +54,14 @@ class SideBar extends Component {
               value={this.state.query}
               onChange={(event) => this.updateQuery(event.target.value)}
             />
+            <ul>
       {
             (this.props.locationsList.constructor === Array) ?
                 this.props.locationsList.map(location =>
-            <div className="location-sideBar" key={location.a}> {location.a} </div>
+            <li className="location-sideBar" key={location.a}> {location.a} </li>
             ):null
           }
+          </ul>
         {/*<div className="location-sideBar"> h1 </div>
         <div className="location-sideBar"> h1 </div>
         <div className="location-sideBar"> h1 </div>
