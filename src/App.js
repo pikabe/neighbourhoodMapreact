@@ -7,8 +7,8 @@ import MapContainer from './MapContainer.js'
 class App extends Component {
 
   state={
-    locationsAll:['a','b'],
-    locationsCurrent:[{a:1},{a:2},{a:3},{a:4},{a:5}],
+    locationsAll:[{a:'hello my'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
+    locationsCurrent:[{a:'hello my'},{a:'name is'},{a:'favourite color'},{a:'hi bye'},{a:'locations'}],
     sideBarOpen: false,
     chosenMarkerOrDiv:[] //rename later
     // previousSideBarState:true
@@ -25,9 +25,15 @@ class App extends Component {
       navClassNames=  "open";
 
     }else {
+      // if (window.innerwidth )
       navClassNames= "close";
     }
     return navClassNames
+  }
+  updateCurrentLocations = (locationsCurrent) =>{
+    this.setState({
+      locationsCurrent
+    })
   }
 
   render() {
@@ -48,7 +54,7 @@ class App extends Component {
 
 
           </header>
-          <SideBar toggle={navClasses} locationsList={this.state.locationsCurrent}/>
+          <SideBar toggle={navClasses} locationsList={this.state.locationsCurrent} locationsAll= {this.state.locationsAll} updateCurrentLocations = {this.updateCurrentLocations}/>
 {/**/}
 
            <MapContainer google={this.props.google}/>

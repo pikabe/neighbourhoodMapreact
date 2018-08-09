@@ -10,6 +10,23 @@ class SideBar extends Component {
     this.setState({
       query: query
     })
+    this.props.updateCurrentLocations(this.filterLocations(this.props.locationsAll,query))
+
+  }
+  filterLocations = (locations,query) => {
+    let currentLocations = [];
+    if ((locations.constructor === Array) && (query.length>0)){
+      locations.map(location =>{
+        if (location.a.includes(query)){
+          currentLocations.push(location)
+        }
+      }
+      )
+    }else {
+      currentLocations = this.props.locationsAll
+    }
+    return currentLocations
+
   }
 
 
@@ -26,6 +43,7 @@ class SideBar extends Component {
   })*/
 
   render(){
+    console.log(this.filterLocations(this.props.locationsAll,this.state.query))
     const styles ={width:'100%',height:'80%'}
     let sideBar = "sideBar " + this.props.toggle
     return(
@@ -39,7 +57,7 @@ class SideBar extends Component {
       {
             (this.props.locationsList.constructor === Array) ?
                 this.props.locationsList.map(location =>
-            <div className="location-sideBar" key={location.a}> location.a </div>
+            <div className="location-sideBar" key={location.a}> {location.a} </div>
             ):null
           }
         {/*<div className="location-sideBar"> h1 </div>

@@ -104,10 +104,17 @@ nav{
   height: 50px;
   border-color: #	191970;
 }
-@media screen and (min-width:574px) {
+@media screen and (min-width:850px) {
   .toggle-SideBar{
 
-    /* display: none; */
+    display: none;
+  }
+  .close {
+    transform: translate(0,0);
+    transition: none;
+  }
+  .sideBar {
+    box-shadow:none;
   }
 
 }
