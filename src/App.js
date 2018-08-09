@@ -29,6 +29,7 @@ class App extends Component {
     }
     return navClassNames
   }
+
   render() {
 
     console.log(this.state.sideBarOpen)
@@ -48,9 +49,9 @@ class App extends Component {
 
           </header>
           <SideBar toggle={navClasses} locationsList={this.state.locationsCurrent}/>
+{/**/}
 
-
-           {/*<MapContainer google={this.props.google}/>*/}
+           <MapContainer google={this.props.google}/>
 
         </div>
       );

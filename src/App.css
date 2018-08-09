@@ -80,6 +80,7 @@ nav{
   flex-wrap: wrap;
   padding-top: 20vh;
   position: absolute;
+  z-index: 998;
 }
 .close{
   transform: translate(-300px,0);
